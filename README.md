@@ -75,6 +75,8 @@ def add(x: int, y: int) -> int:
     return x + y
 ```
 
+See [example_files/example.py](example_files/example.py) for a full working example covering sync, async, threads, errors and stacked decorators.
+
 ---
 
 ## configure()
@@ -161,8 +163,8 @@ TEST[2026-04-05 - 12:36:13:439][ERROR][70f74f1d][MainThread][will_fail]ValueErro
 TEST[2026-04-05 - 12:36:13:623][DEBUG][700732fd][Thread-1 (thread_worker)][thread_worker]|BeforeFunction| Argument infos: keys - () - Number of args: 1
 TEST[2026-04-05 - 12:36:13:627][ERROR][87cd1ab0][Thread-3 (thread_worker)][thread_worker]ValueError: Worker 2 cannot handle this load
 ```
+See the whole log example [HERE](example_files/2026-04-05_12-36-13_taipan.log)
 
-See `example_files/example.py` and `example_files/` for a full working example covering sync, async, threads, errors and stacked decorators.
 
 ---
 
