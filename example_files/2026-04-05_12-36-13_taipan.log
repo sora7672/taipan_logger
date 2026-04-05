@@ -1,0 +1,46 @@
+TEST[2026-04-05 - 12:36:13:427][DEBUG][654b403a][MainThread][add]|BeforeFunction| Argument infos: keys - () - Number of args: 2
+TEST[2026-04-05 - 12:36:13:427][DEBUG][654b403a][MainThread][add]|AfterFunction| Time needed 0.001s returns int
+TEST[2026-04-05 - 12:36:13:427][DEBUG][6e19fb82][MainThread][greet]|BeforeFunction| Argument infos: keys - () - Number of args: 1
+TEST[2026-04-05 - 12:36:13:431][INFO][NO TRACEID][MainThread][greet]Greeting someone
+TEST[2026-04-05 - 12:36:13:431][DEBUG][6e19fb82][MainThread][greet]|AfterFunction| Time needed 0.004s returns str
+TEST[2026-04-05 - 12:36:13:438][DEBUG][fe648340][MainThread][no_args_no_return]|BeforeFunction| Argument infos: keys - () - Number of args: 0
+TEST[2026-04-05 - 12:36:13:439][DEBUG][NO TRACEID][MainThread][no_args_no_return]doing something quietly
+TEST[2026-04-05 - 12:36:13:439][DEBUG][fe648340][MainThread][no_args_no_return]|AfterFunction| Time needed 0.001s returns NoneType
+TEST[2026-04-05 - 12:36:13:439][DEBUG][70f74f1d][MainThread][will_fail]|BeforeFunction| Argument infos: keys - () - Number of args: 0
+TEST[2026-04-05 - 12:36:13:439][ERROR][70f74f1d][MainThread][will_fail]ValueError: I was always going to fail
+TEST[2026-04-05 - 12:36:13:439][DEBUG][969e0629][MainThread][async_fetch]|async||BeforeFunction| Argument infos: keys - () - Number of args: 1
+TEST[2026-04-05 - 12:36:13:547][DEBUG][969e0629][MainThread][async_fetch]|async||AfterFunction| Time needed 0.108s returns dict
+TEST[2026-04-05 - 12:36:13:547][DEBUG][79514c94][MainThread][async_no_return]|async||BeforeFunction| Argument infos: keys - () - Number of args: 0
+TEST[2026-04-05 - 12:36:13:607][WARNING][NO TRACEID][MainThread][async_no_return]async warning from inside
+TEST[2026-04-05 - 12:36:13:608][DEBUG][79514c94][MainThread][async_no_return]|async||AfterFunction| Time needed 0.060s returns NoneType
+TEST[2026-04-05 - 12:36:13:608][DEBUG][207e1c1b][MainThread][async_fail]|async||BeforeFunction| Argument infos: keys - () - Number of args: 0
+TEST[2026-04-05 - 12:36:13:621][ERROR][207e1c1b][MainThread][async_fail]RuntimeError: async explosion
+TEST[2026-04-05 - 12:36:13:623][DEBUG][700732fd][Thread-1 (thread_worker)][thread_worker]|BeforeFunction| Argument infos: keys - () - Number of args: 1
+TEST[2026-04-05 - 12:36:13:623][DEBUG][5593ee91][Thread-2 (thread_worker)][thread_worker]|BeforeFunction| Argument infos: keys - () - Number of args: 1
+TEST[2026-04-05 - 12:36:13:623][DEBUG][87cd1ab0][Thread-3 (thread_worker)][thread_worker]|BeforeFunction| Argument infos: keys - () - Number of args: 1
+TEST[2026-04-05 - 12:36:13:625][INFO][NO TRACEID][Thread-1 (thread_worker)][thread_worker]Worker 0 started
+TEST[2026-04-05 - 12:36:13:625][INFO][NO TRACEID][Thread-2 (thread_worker)][thread_worker]Worker 1 started
+TEST[2026-04-05 - 12:36:13:627][DEBUG][0da68d20][Thread-1 (thread_worker)][add]|BeforeFunction| Argument infos: keys - () - Number of args: 2
+TEST[2026-04-05 - 12:36:13:627][INFO][NO TRACEID][Thread-3 (thread_worker)][thread_worker]Worker 2 started
+TEST[2026-04-05 - 12:36:13:627][DEBUG][28f4c4cc][Thread-2 (thread_worker)][add]|BeforeFunction| Argument infos: keys - () - Number of args: 2
+TEST[2026-04-05 - 12:36:13:627][DEBUG][0da68d20][Thread-1 (thread_worker)][add]|AfterFunction| Time needed 0.000s returns int
+TEST[2026-04-05 - 12:36:13:627][ERROR][87cd1ab0][Thread-3 (thread_worker)][thread_worker]ValueError: Worker 2 cannot handle this load
+TEST[2026-04-05 - 12:36:13:627][DEBUG][28f4c4cc][Thread-2 (thread_worker)][add]|AfterFunction| Time needed 0.000s returns int
+TEST[2026-04-05 - 12:36:13:628][DEBUG][NO TRACEID][Thread-1 (thread_worker)][thread_worker]Worker 0 finished
+TEST[2026-04-05 - 12:36:13:628][DEBUG][NO TRACEID][Thread-2 (thread_worker)][thread_worker]Worker 1 finished
+TEST[2026-04-05 - 12:36:13:628][DEBUG][700732fd][Thread-1 (thread_worker)][thread_worker]|AfterFunction| Time needed 0.005s returns int
+TEST[2026-04-05 - 12:36:13:628][DEBUG][5593ee91][Thread-2 (thread_worker)][thread_worker]|AfterFunction| Time needed 0.005s returns int
+TEST[2026-04-05 - 12:36:13:630][DEBUG][2d79631c][MainThread][multiply]|BeforeFunction| Argument infos: keys - () - Number of args: 2
+TEST[2026-04-05 - 12:36:13:630][DEBUG][2d79631c][MainThread][multiply]|AfterFunction| Time needed 0.000s returns int
+TEST[2026-04-05 - 12:36:13:630][DEBUG][b97cfc41][MainThread][multiply]|BeforeFunction| Argument infos: keys - () - Number of args: 2
+TEST[2026-04-05 - 12:36:13:630][DEBUG][b97cfc41][MainThread][multiply]|AfterFunction| Time needed 0.000s returns int
+TEST[2026-04-05 - 12:36:13:630][DEBUG][d76f10b1][MainThread][say_hello]|BeforeFunction| Argument infos: keys - () - Number of args: 1
+TEST[2026-04-05 - 12:36:13:630][DEBUG][d76f10b1][MainThread][say_hello]|AfterFunction| Time needed 0.000s returns str
+TEST[2026-04-05 - 12:36:13:630][DEBUG][6fd3e678][MainThread][say_hello]|BeforeFunction| Argument infos: keys - () - Number of args: 1
+TEST[2026-04-05 - 12:36:13:631][DEBUG][6fd3e678][MainThread][say_hello]|AfterFunction| Time needed 0.001s returns str
+TEST[2026-04-05 - 12:36:13:631][DEBUG][48bff43b][MainThread][say_hello]|BeforeFunction| Argument infos: keys - () - Number of args: 1
+TEST[2026-04-05 - 12:36:13:631][DEBUG][48bff43b][MainThread][say_hello]|AfterFunction| Time needed 0.000s returns str
+TEST[2026-04-05 - 12:36:13:631][ERROR][NO TRACEID][MainThread][main]manual error log
+TEST[2026-04-05 - 12:36:13:631][WARNING][NO TRACEID][MainThread][main]manual warning log
+TEST[2026-04-05 - 12:36:13:632][DEBUG][NO TRACEID][MainThread][main]manual debug log
+TEST[2026-04-05 - 12:36:13:632][INFO][NO TRACEID][MainThread][main]manual info log

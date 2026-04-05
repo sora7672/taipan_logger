@@ -1,0 +1,60 @@
+Sora Open Source Software License (SOSS) v1.0
+Copyright (c) 2026 sora7672
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to use
+and distribute the Software under the following conditions:
+
+1. PERMITTED USE
+   The Software may be used, copied, and distributed in its original,
+   unmodified form, both for private and commercial purposes.
+
+2. INHERITANCE & EXTENSION
+   Extending the Software through class inheritance or composition is permitted.
+   The resulting derivative work must be clearly marked as a separate product
+   and must not replace or repackage the original Software.
+
+3. NO MODIFICATION
+   Modification of the original source files is not permitted. You may not
+   alter, transform, or build upon the source files directly.
+
+4. COMMERCIAL ATTRIBUTION
+   Any use of this Software in a commercial or business context requires that
+   the original author (sora7672) be credited in the product's About section,
+   credits screen, documentation, or equivalent visible location.
+   The credit must include the name "sora7672" and a link to:
+   https://www.soss.page
+
+5. SUPPORT
+   This Software is provided without any official support.
+   Contact requests are welcome at any time via GitHub Issues or the
+   SOSS organization page: https://github.com/soss-community
+
+6. BUSINESS SUPPORT
+   If a third party wishes to offer official business support for this
+   Software, this must be requested from the original author (sora7672).
+   Approved business support providers will be listed and linked in the
+   respective project README.
+   The author reserves the right to revoke any business support listing
+   at any time if quality standards are not met. The affected provider
+   will be notified and the listing will be updated accordingly.
+
+7. NO WARRANTY
+   The Software is provided "as is", without warranty of any kind, express
+   or implied. The author shall not be liable for any damages arising from
+   the use of this Software.
+
+8. ACCEPTANCE
+   Use of this Software constitutes acceptance of these terms.
+
+---
+SOSS is a custom license created by Sora Open Source Software(SOSS) for all software published
+under the SOSS standard. Each project using SOSS must include this license
+file unchanged.
+Website: https://www.soss.page
+
+NOTE: This license may be updated over time. Always refer to the latest
+version of the SOSS license at:
+https://github.com/soss-community
+
+The version included in this repository was current at time of release.

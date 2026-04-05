@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling>=1.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "taipan-logger"
+version = "1.0.0"
+description = "A lightweight, DSGVO-safe, threadsafe, async-ready Python logger."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [
+    { name = "sora7672" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/sora7672/taipan_logger"
+Repository = "https://github.com/sora7672/taipan_logger"
+"Bug Tracker" = "https://github.com/sora7672/taipan_logger/issues"
+"Contact" = "https://github.com/sora7672"
