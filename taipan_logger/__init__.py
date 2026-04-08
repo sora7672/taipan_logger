@@ -7,9 +7,9 @@ for use by any code that imports this package.
 """
 
 __author__: str = "sora7672"
-__version__: str = "1.0.0"
-__date__: str = "2026-04-05"
-__description__: str = "A lightweight, DSGVO-safe, threadsafe, async-ready Python logger."
+__version__: str = "1.0.1"
+__date__: str = "2026-04-08"
+__description__: str = "A lightweight, GDPR-safe, threadsafe, async-ready Python logger."
 
 from .logger import taipan, configure
 from .decorator import trace

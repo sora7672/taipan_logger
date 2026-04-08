@@ -1,6 +1,6 @@
 # taipan-logger
 
-> A lightweight, DSGVO-safe, threadsafe, async-ready Python logger.  
+> A lightweight, GDPR-safe, threadsafe, async-ready Python logger.  
 > No external dependencies. Drop it in, configure once, log forever.
 
 ---
@@ -8,7 +8,7 @@
 ## Features
 
 - **Singleton-based** - one instance across your entire service
-- **DSGVO-safe** - no user data, no content, only structural metadata
+- **GDPR-safe** - no user data, no content, only structural metadata
 - **Threadsafe** - uses `threading.Lock` where it matters
 - **Async-ready** - `@trace` works on both sync and async functions
 - **Zero dependencies** - pure Python standard library
@@ -50,7 +50,7 @@ One import. If you want one configure call. Done.
 ## Installation
 
 ```bash
-pip install git+https://github.com/sora7672/taipan_logger.git
+pip install git+https://github.com/soss-community/taipan_logger.git
 ```
 
 ---
@@ -226,13 +226,11 @@ That philosophy carries over here.
 Taipan-logger is built to hit exactly what matters: structural metadata, timing, thread context and error traces.
 Nothing more, nothing less. No user data, no guesswork, no bloat.
 
-Precise by design. DSGVO-safe by default.
+Precise by design. GDPR-safe by default.
 
 ---
 
 ## Roadmap
 
-- [ ] PyPI publish
-- [ ] Transfer to soss-community organization
 - [ ] CLI interface for external logger access
 
