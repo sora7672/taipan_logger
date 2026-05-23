@@ -18,7 +18,7 @@ import logging
 
 from pathlib import Path
 from sys import argv
-from os import getenv
+from os import getenv, getpid
 from threading import Lock, current_thread
 from time import monotonic
 
@@ -46,7 +46,8 @@ class TaipanLogger:
     # Configurable options
     _debug: bool = False
     _exception_hook_in_is_set: bool = False
-    _log_name: str = "taipan.log"
+    _log_name: str = "taipan"
+    _pid : str = getpid()  # Needs to be set once at start, to prevent multiple processes using the same log
     _log_path: Path | None = None
     _datetime_format: str = 'YYYY-MM-DD - hh:mm:ss:mimimi'
     _field_order: list[str] = ['DATETIME', 'LOG_STATUS', 'TRACEID', 'THREAD', 'FUNC_NAME', 'MESSAGE']
@@ -149,17 +150,29 @@ class TaipanLogger:
                 "The fields are missing at least one of these fields: {}".format(["DATETIME", "LOG_STATUS", "MESSAGE"])
             )
 
-        cls._field_order = field_order if field_order is not None else cls._field_order
-        cls._datetime_format = datetime_format if datetime_format is not None else cls._datetime_format
-        cls._log_name = log_name if log_name is not None else cls._log_name
-        cls._max_old_logs = max_old_logs if max_old_logs is not None else cls._max_old_logs
-        cls._delete_older_logs = delete_older_logs if delete_older_logs is not None else cls._delete_older_logs
-        cls._special_prefix = special_prefix if special_prefix is not None else cls._special_prefix
-        cls._debug = debug if debug is not None else cls._debug
-        cls._keep_log_open = keep_log_open if keep_log_open is not None else cls._keep_log_open
-        cls._env_check_interval = env_check_interval if env_check_interval is not None else cls._env_check_interval
-        cls._exception_hook_in_is_set = exception_hook_in_is_set if exception_hook_in_is_set is not None \
-                                            else cls._exception_hook_in_is_set
+        if field_order:
+            cls._field_order = field_order
+        if datetime_format:
+            cls._datetime_format = datetime_format
+        if log_name:
+            n_logname = log_name.split(".")[0]
+            if n_logname != log_name:
+                print("Log name included a '.', we split it to: {}".format(n_logname))
+            cls._log_name = n_logname
+        if max_old_logs:
+            cls._max_old_logs = max_old_logs
+        if delete_older_logs:
+            cls._delete_older_logs = delete_older_logs
+        if special_prefix:
+            cls._special_prefix = special_prefix
+        if debug:
+            cls._debug = debug
+        if keep_log_open:
+            cls._keep_log_open = keep_log_open
+        if env_check_interval:
+            cls._env_check_interval = env_check_interval
+        if exception_hook_in_is_set:
+            cls._exception_hook_in_is_set = exception_hook_in_is_set
 
         if log_path:
             # caller frame is 1 level up since configure lives directly on the class
@@ -348,7 +361,7 @@ class TaipanLogger:
 
         cls.__handle_old_logs()
         prefix: str = get_datetime_string_by_format("YYYY-MM-DD_hh-mm-ss_")
-        cls.__full_log_file_path = Path(cls._log_path, f"{prefix}{cls._log_name}")
+        cls.__full_log_file_path = Path(cls._log_path, f"{prefix}{cls._pid}_{cls._log_name}.log")
         cls.__full_log_file_path.touch()
         # Set rotation deadline as a monotonic float so __timed_checks can compare cleanly
         cls.__next_log_rotation_time = monotonic() + cls._log_rotation_interval
