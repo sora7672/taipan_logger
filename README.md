@@ -7,7 +7,7 @@
 [![License](https://img.shields.io/badge/license-SOSS%20v1.0-green)](https://github.com/soss-community/.github/blob/main/license/SOSS-MODULE-LICENSE.md)
 [![Version](https://img.shields.io/badge/version-2.0.0-orange)](#)
 [![Community](https://img.shields.io/badge/community-soss.page-purple)](https://soss.page)
-[img width=75px height=20 src="https://komarev.com/ghpvc/?username=soss-community-taipan&color=763eab&style=flat-round&label=Views:" /](#)
+[<img width=75px height=20 src="https://komarev.com/ghpvc/?username=soss-community-taipan&color=763eab&style=flat-round&label=Views:" />](#)
 
 
 ---
